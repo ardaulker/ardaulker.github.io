@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>X Sword</title>
+<meta name="description" content="X Sword · Yön her tur el değiştirir. · Direction changes hands every round.">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #0B1026; color: #E9F0FF;
+         font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; text-align: center; }
+  main { padding: 32px 16px; max-width: 520px; }
+  img { width: 112px; height: 112px; border-radius: 24px; }
+  h1 { font-size: 36px; margin: 16px 0 4px; letter-spacing: .02em; }
+  .slogan { color: #C7D0F0; margin: 0 0 20px; font-size: 18px; }
+  .soon { color: #8591BE; margin: 0 0 32px; }
+  nav { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; font-size: 15px; }
+  a { color: #3BFF8F; }
+  .switch { margin-top: 40px; font-size: 13px; }
+  html[lang="en"] .tr, html[lang="tr"] .en { display: none; }
+</style>
+</head>
+<body>
+<main>
+  <img src="./icon.svg" alt="">
+  <h1>X Sword</h1>
+  <p class="slogan"><span class="tr">Yön her tur el değiştirir.</span><span class="en">Direction changes hands every round.</span></p>
+  <p class="soon"><span class="tr">Yakında App Store ve Google Play'de.</span><span class="en">Coming soon to the App Store and Google Play.</span></p>
+  <nav>
+    <a class="tr" href="./play/legal/privacy-tr.html">Gizlilik politikası</a>
+    <a class="tr" href="./play/legal/index-tr.html">Tüm belgeler</a>
+    <a class="en" href="./play/legal/privacy.html">Privacy policy</a>
+    <a class="en" href="./play/legal/index.html">All documents</a>
+  </nav>
+  <p class="switch"><a class="tr" href="#en">English</a><a class="en" href="#tr">Türkçe</a></p>
+</main>
+<script>
+  const choose = () => {
+    const h = location.hash.slice(1);
+    document.documentElement.lang = h === 'en' || h === 'tr' ? h : (navigator.language || '').toLowerCase().startsWith('tr') ? 'tr' : 'en';
+  };
+  choose();
+  addEventListener('hashchange', choose);
+</script>
+</body>
+</html>

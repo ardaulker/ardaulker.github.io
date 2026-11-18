@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>X Sword · Destek / Support</title>
+<meta name="description" content="X Sword destek ve iletişim · X Sword support and contact">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; background: #0B1026; color: #E9F0FF; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { padding: 32px 16px 48px; max-width: 640px; margin: 0 auto; }
+  header { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
+  header img { width: 56px; height: 56px; border-radius: 13px; }
+  h1 { font-size: 28px; margin: 0; }
+  h2 { font-size: 17px; margin: 28px 0 6px; }
+  p { margin: 0 0 10px; color: #C7D0F0; }
+  .mail { display: inline-block; margin: 4px 0 8px; padding: 10px 18px; border-radius: 22px; background: #3BFF8F; color: #0B1026;
+          font-weight: 700; text-decoration: none; overflow-wrap: anywhere; }
+  a { color: #3BFF8F; }
+  nav { margin-top: 36px; display: flex; gap: 20px; flex-wrap: wrap; font-size: 15px; }
+  html[lang="en"] .tr, html[lang="tr"] .en { display: none; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="./icon.svg" alt="">
+    <h1><span class="tr">X Sword destek</span><span class="en">X Sword support</span></h1>
+  </header>
+
+  <p class="tr">Bir sorun, öneri ya da şikâyet için yaz. Genelde birkaç gün içinde cevap veririm.</p>
+  <p class="en">Write for a problem, an idea or a report. I usually answer within a few days.</p>
+  <a class="mail" href="mailto:arda.ulkerr@gmail.com?subject=X%20Sword">arda.ulkerr@gmail.com</a>
+  <p class="tr">Geliştirici: Arda Ülker</p>
+  <p class="en">Developer: Arda Ülker</p>
+
+  <div class="tr">
+    <h2>Kuralları nereden öğrenirim?</h2>
+    <p>Ana menüdeki Eğitim üç mini bulmacayla bir dakikada anlatır. Ayrıntılar Ayarlar → Nasıl oynanır? ekranında.</p>
+    <h2>Çok oyunculu maçta bağlanamıyorum.</h2>
+    <p>İki telefon da internete bağlı olmalı. Biri Çok oyunculu → Oda kur der, diğeri 5 karakterlik oda koduyla katılır. Bazı okul ve iş ağları telefonlar arası bağlantıyı engeller; mobil veriyle tekrar dene.</p>
+    <h2>İlerlemem nerede duruyor?</h2>
+    <p>Telefonunda. Game Center ya da Google Play Games ile giriş yaptıysan bir kopyası Apple'ın ya da Google'ın bulut kaydında da tutulur.</p>
+    <h2>Verilerimi nasıl silerim?</h2>
+    <p>Ayarlar → Hukuki belgeler → Bu cihazdaki verileri sil. Uygulamayı silmek de hepsini kaldırır. Bulut kaydını Apple ya da Google hesap ayarlarından silebilirsin.</p>
+    <h2>Bir oyuncuyu nasıl engellerim ya da bildiririm?</h2>
+    <p>Lobide ya da maç menüsünde oyuncunun yanındaki ⋯ düğmesine dokun. Engellediğin oyuncunun adı sana artık görünmez. Bildir düğmesi bu adrese hazır bir e-posta açar; sen gönderirsin.</p>
+  </div>
+
+  <div class="en">
+    <h2>Where do I learn the rules?</h2>
+    <p>The Tutorial on the main menu teaches them in a minute with three mini puzzles. The details are under Settings → How to play.</p>
+    <h2>I can't connect in a multiplayer match.</h2>
+    <p>Both phones need the internet. One taps Multiplayer → Create room, the other joins with the 5-character room code. Some school and office networks block phone-to-phone connections; try again on mobile data.</p>
+    <h2>Where is my progress kept?</h2>
+    <p>On your phone. If you signed in with Game Center or Google Play Games, a copy is also kept in Apple's or Google's cloud save.</p>
+    <h2>How do I delete my data?</h2>
+    <p>Settings → Legal documents → Delete data on this device. Uninstalling the app removes it all too. You can delete the cloud save in your Apple or Google account settings.</p>
+    <h2>How do I block or report a player?</h2>
+    <p>Tap the ⋯ button next to the player in the lobby or in the match menu. You no longer see a blocked player's name. Report opens a ready-made e-mail to this address for you to send.</p>
+  </div>
+
+  <nav>
+    <a href="./"><span class="tr">Ana sayfa</span><span class="en">Home</span></a>
+    <a class="tr" href="./play/legal/privacy-tr.html">Gizlilik politikası</a>
+    <a class="en" href="./play/legal/privacy.html">Privacy policy</a>
+    <a class="tr" href="#en">English</a><a class="en" href="#tr">Türkçe</a>
+  </nav>
+</main>
+<script>
+  const choose = () => {
+    const h = location.hash.slice(1);
+    document.documentElement.lang = h === 'en' || h === 'tr' ? h : (navigator.language || '').toLowerCase().startsWith('tr') ? 'tr' : 'en';
+  };
+  choose();
+  addEventListener('hashchange', choose);
+</script>
+</body>
+</html>
